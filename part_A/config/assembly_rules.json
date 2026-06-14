@@ -1,0 +1,172 @@
+{
+  "source_sequences": {
+    "training": [
+      "22_assy_0_1",
+      "22_assy_2_3",
+      "25_assy_0_1",
+      "25_assy_2_1"
+    ],
+    "analysis_only_test": [
+      "27_assy_0_1"
+    ]
+  },
+  "completion_frame_tolerance": 15,
+  "procedure_step_to_psr_label": {
+    "1": [3],
+    "2": [6],
+    "3": [9, 12],
+    "4": [15],
+    "5": [18],
+    "6": [21],
+    "7": [24],
+    "8": [27],
+    "9": [30]
+  },
+  "psr_label_codes": {
+    "3": "Install front chassis",
+    "6": "Install front chassis pin",
+    "9": "Install rear chassis",
+    "12": "Install short rear chassis",
+    "15": "Install front rear chassis pin",
+    "18": "Install rear rear chassis pin",
+    "21": "Install front bracket",
+    "24": "Install front bracket screw",
+    "27": "Install front wheel assy",
+    "30": "Install rear wheel assy"
+  },
+  "observed_timelines": {
+    "22_assy_0_1": [
+      [3, 6],
+      [9, 18],
+      [15],
+      [21, 24, 27],
+      [30]
+    ],
+    "22_assy_2_3": [
+      [3, 6],
+      [12, 18],
+      [15],
+      [21, 24, 27],
+      [30]
+    ],
+    "25_assy_0_1": [
+      [9, 15],
+      [18],
+      [3, 6],
+      [30],
+      [21, 24],
+      [27]
+    ],
+    "25_assy_2_1": [
+      [9, 18],
+      [3, 6],
+      [30],
+      [21, 24],
+      [27]
+    ],
+    "27_assy_0_1": [
+      [3, 6],
+      [9, 15],
+      [18],
+      [30],
+      [21, 24, 27]
+    ]
+  },
+  "always_simultaneous": [
+    {
+      "psr_label_codes": [3, 6],
+      "support": "5/5 sequences"
+    },
+    {
+      "psr_label_codes": [21, 24],
+      "support": "5/5 sequences"
+    }
+  ],
+  "conditional_simultaneity": [
+    {
+      "psr_label_codes": [21, 24, 27],
+      "support": "3/5 sequences",
+      "interpretation": "Front wheel completion may share the bracket/screw completion frame, but may also occur later."
+    },
+    {
+      "rule": "The selected rear chassis variant completes with at least one present rear chassis pin step.",
+      "support": "5/5 sequences",
+      "observed_pairs": {
+        "9+15": 2,
+        "9+18": 2,
+        "12+18": 1
+      }
+    }
+  ],
+  "variant_and_optional_steps": [
+    {
+      "exclusive_variants": [9, 12],
+      "rule": "Use rear chassis or short rear chassis, not both.",
+      "observed_support": "5/5 sequences"
+    },
+    {
+      "optional_or_missing": 15,
+      "observed_presence": "4/5 sequences"
+    }
+  ],
+  "strict_precedence": [
+    {
+      "before": [3, 6],
+      "after": [21, 24, 27, 30],
+      "support": "5/5 sequences"
+    },
+    {
+      "before": ["selected rear chassis variant", 15, 18],
+      "after": [21, 24, 27, 30],
+      "condition": "Only apply a prerequisite step when it exists in that sequence.",
+      "support": "All comparable sequences"
+    },
+    {
+      "before_or_equal": [21, 24],
+      "after": [27],
+      "support": "5/5 sequences; equal in 3 and strictly before in 2"
+    }
+  ],
+  "flexible_order": [
+    {
+      "groups": [
+        [3, 6],
+        ["rear chassis branch"]
+      ],
+      "evidence": "Front branch completed first in 3 sequences and rear branch first in 2."
+    },
+    {
+      "groups": [
+        [15],
+        [18]
+      ],
+      "evidence": "Their order reverses across sequences; one may coincide with rear chassis installation."
+    },
+    {
+      "groups": [
+        [30],
+        [21, 24, 27]
+      ],
+      "evidence": "Rear wheel completed after the front finishing branch in 2 sequences and before it in 3."
+    }
+  ],
+  "decoder_summary": {
+    "early_parallel_branches": [
+      [3, 6],
+      ["rear chassis variant", "rear chassis pin steps"]
+    ],
+    "front_finishing_branch": [
+      [21, 24],
+      [27]
+    ],
+    "rear_finishing_branch": [
+      [30]
+    ],
+    "rules": [
+      "Both early branches must complete before either finishing branch.",
+      "Procedure steps 6 and 7 (PSR codes 21 and 24) are a simultaneous pair.",
+      "Procedure step 8 (PSR code 27) cannot precede steps 6+7, but may complete simultaneously with them.",
+      "Procedure step 9 (PSR code 30) has no fixed order relative to the procedure-step 6+7+8 front finishing branch."
+    ]
+  }
+}

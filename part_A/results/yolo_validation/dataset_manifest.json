@@ -1,0 +1,84 @@
+{
+  "sequence": "22_assy_0_1",
+  "split_method": "temporal blocks of 30 frames; every tenth block is val",
+  "class_map": {
+    "0": 0,
+    "1": 1,
+    "2": 2,
+    "3": 3,
+    "5": 4,
+    "6": 5,
+    "7": 6,
+    "8": 7,
+    "9": 8,
+    "10": 9
+  },
+  "names": [
+    "base",
+    "front_chassis",
+    "front_chassis_pin",
+    "rear_chassis",
+    "front_rear_chassis_pin",
+    "rear_rear_chassis_pin",
+    "front_bracket",
+    "front_bracket_screw",
+    "front_wheel_assy",
+    "rear_wheel_assy"
+  ],
+  "images": {
+    "train": 2468,
+    "val": 270
+  },
+  "instances": {
+    "train": {
+      "0": 2161,
+      "1": 2053,
+      "2": 1786,
+      "3": 1826,
+      "4": 1236,
+      "5": 1296,
+      "6": 1431,
+      "7": 612,
+      "8": 849,
+      "9": 184
+    },
+    "val": {
+      "0": 254,
+      "1": 215,
+      "2": 208,
+      "3": 234,
+      "4": 169,
+      "5": 186,
+      "6": 118,
+      "7": 50,
+      "8": 92,
+      "9": 30
+    }
+  },
+  "frames_with_class": {
+    "train": {
+      "0": 2161,
+      "1": 2053,
+      "2": 1786,
+      "3": 1826,
+      "4": 1236,
+      "5": 1296,
+      "6": 1431,
+      "7": 612,
+      "8": 849,
+      "9": 184
+    },
+    "val": {
+      "0": 254,
+      "1": 215,
+      "2": 208,
+      "3": 234,
+      "4": 169,
+      "5": 186,
+      "6": 118,
+      "7": 50,
+      "8": 92,
+      "9": 30
+    }
+  }
+}

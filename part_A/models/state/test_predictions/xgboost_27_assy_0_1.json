@@ -1,0 +1,25 @@
+{
+  "sequence": "27_assy_0_1",
+  "model": "xgboost",
+  "target_mode": "state",
+  "event_frames": {
+    "front_chassis_pair": 857,
+    "rear_chassis_variant": 846,
+    "front_rear_chassis_pin": 996,
+    "rear_rear_chassis_pin": 855,
+    "front_bracket_pair": 2674,
+    "front_wheel_assy": 2737,
+    "rear_wheel_assy": 2515
+  },
+  "psr_label_code_frames": {
+    "3": 857,
+    "6": 857,
+    "9_or_12": 846,
+    "15": 996,
+    "18": 855,
+    "21": 2674,
+    "24": 2674,
+    "27": 2737,
+    "30": 2515
+  }
+}

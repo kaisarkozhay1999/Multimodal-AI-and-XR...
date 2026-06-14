@@ -1,0 +1,15 @@
+{
+  "selection_source": "Previously selected from four leave-one-sequence-out training predictions",
+  "smooth_window": 31,
+  "persistence_frames": 20,
+  "hysteresis_margin": 0.15,
+  "enter_thresholds": {
+    "front_chassis_pair": 0.65,
+    "rear_chassis_variant": 0.95,
+    "front_rear_chassis_pin": 0.5,
+    "rear_rear_chassis_pin": 0.95,
+    "front_bracket_pair": 0.95,
+    "front_wheel_assy": 0.95,
+    "rear_wheel_assy": 0.65
+  }
+}

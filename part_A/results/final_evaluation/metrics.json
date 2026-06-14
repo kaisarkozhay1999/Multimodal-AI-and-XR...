@@ -1,0 +1,293 @@
+{
+  "sequence": "27_assy_0_1",
+  "pipeline": "single persistent state TCN",
+  "recognized_event_frames": {
+    "front_chassis_pair": 328,
+    "rear_chassis_variant": 246,
+    "front_rear_chassis_pin": 602,
+    "rear_rear_chassis_pin": 606,
+    "front_bracket_pair": 2717,
+    "front_wheel_assy": 2754,
+    "rear_wheel_assy": 1682
+  },
+  "decoder": {
+    "smooth_window": 31,
+    "persistence_frames": 20,
+    "hysteresis_margin": 0.15,
+    "enter_thresholds": {
+      "front_chassis_pair": 0.65,
+      "rear_chassis_variant": 0.95,
+      "front_rear_chassis_pin": 0.5,
+      "rear_rear_chassis_pin": 0.95,
+      "front_bracket_pair": 0.95,
+      "front_wheel_assy": 0.95,
+      "rear_wheel_assy": 0.65
+    },
+    "monotonic_completion": true,
+    "assembly_rules": true
+  },
+  "timing_metrics": {
+    "event_count": 7,
+    "pair_count": 21,
+    "completion_time_mae_seconds": 12.22857142857143,
+    "pairwise_completion_interval_rmse_seconds": 23.84749163209534,
+    "paper_style_procedure_step_f1": {
+      "true_positives": 5,
+      "false_positives": 4,
+      "false_negatives": 0,
+      "precision": 0.5555555555555556,
+      "recall": 1.0,
+      "f1": 0.7142857142857143,
+      "rule": "On-time or late = TP; premature = FP; missing completed step = FN."
+    },
+    "per_event": [
+      {
+        "event": "front_chassis_pair",
+        "label": "Procedure steps 1+2: front chassis + pin",
+        "ground_truth_frame": 247,
+        "predicted_frame": 328,
+        "signed_error_frames": 81,
+        "signed_error_seconds": 8.1,
+        "absolute_error_seconds": 8.1,
+        "represented_procedure_steps": 2,
+        "paper_f1_status": "TP"
+      },
+      {
+        "event": "rear_chassis_variant",
+        "label": "Procedure step 3: rear chassis",
+        "ground_truth_frame": 659,
+        "predicted_frame": 246,
+        "signed_error_frames": -413,
+        "signed_error_seconds": -41.3,
+        "absolute_error_seconds": 41.3,
+        "represented_procedure_steps": 1,
+        "paper_f1_status": "FP"
+      },
+      {
+        "event": "front_rear_chassis_pin",
+        "label": "Procedure step 4: front-rear chassis pin",
+        "ground_truth_frame": 659,
+        "predicted_frame": 602,
+        "signed_error_frames": -57,
+        "signed_error_seconds": -5.7,
+        "absolute_error_seconds": 5.7,
+        "represented_procedure_steps": 1,
+        "paper_f1_status": "FP"
+      },
+      {
+        "event": "rear_rear_chassis_pin",
+        "label": "Procedure step 5: rear-rear chassis pin",
+        "ground_truth_frame": 844,
+        "predicted_frame": 606,
+        "signed_error_frames": -238,
+        "signed_error_seconds": -23.8,
+        "absolute_error_seconds": 23.8,
+        "represented_procedure_steps": 1,
+        "paper_f1_status": "FP"
+      },
+      {
+        "event": "front_bracket_pair",
+        "label": "Procedure steps 6+7: bracket + screw",
+        "ground_truth_frame": 2709,
+        "predicted_frame": 2717,
+        "signed_error_frames": 8,
+        "signed_error_seconds": 0.8,
+        "absolute_error_seconds": 0.8,
+        "represented_procedure_steps": 2,
+        "paper_f1_status": "TP"
+      },
+      {
+        "event": "front_wheel_assy",
+        "label": "Procedure step 8: front wheel assembly",
+        "ground_truth_frame": 2709,
+        "predicted_frame": 2754,
+        "signed_error_frames": 45,
+        "signed_error_seconds": 4.5,
+        "absolute_error_seconds": 4.5,
+        "represented_procedure_steps": 1,
+        "paper_f1_status": "TP"
+      },
+      {
+        "event": "rear_wheel_assy",
+        "label": "Procedure step 9: rear wheel assembly",
+        "ground_truth_frame": 1696,
+        "predicted_frame": 1682,
+        "signed_error_frames": -14,
+        "signed_error_seconds": -1.4,
+        "absolute_error_seconds": 1.4,
+        "represented_procedure_steps": 1,
+        "paper_f1_status": "FP"
+      }
+    ],
+    "pairwise_intervals": [
+      {
+        "first_event": "front_chassis_pair",
+        "second_event": "rear_chassis_variant",
+        "ground_truth_interval_seconds": 41.2,
+        "predicted_interval_seconds": 8.2,
+        "interval_error_seconds": -33.0,
+        "squared_interval_error_seconds2": 1089.0
+      },
+      {
+        "first_event": "front_chassis_pair",
+        "second_event": "front_rear_chassis_pin",
+        "ground_truth_interval_seconds": 41.2,
+        "predicted_interval_seconds": 27.4,
+        "interval_error_seconds": -13.800000000000004,
+        "squared_interval_error_seconds2": 190.4400000000001
+      },
+      {
+        "first_event": "front_chassis_pair",
+        "second_event": "rear_rear_chassis_pin",
+        "ground_truth_interval_seconds": 59.7,
+        "predicted_interval_seconds": 27.8,
+        "interval_error_seconds": -31.900000000000002,
+        "squared_interval_error_seconds2": 1017.6100000000001
+      },
+      {
+        "first_event": "front_chassis_pair",
+        "second_event": "front_bracket_pair",
+        "ground_truth_interval_seconds": 246.2,
+        "predicted_interval_seconds": 238.9,
+        "interval_error_seconds": -7.299999999999983,
+        "squared_interval_error_seconds2": 53.28999999999975
+      },
+      {
+        "first_event": "front_chassis_pair",
+        "second_event": "front_wheel_assy",
+        "ground_truth_interval_seconds": 246.2,
+        "predicted_interval_seconds": 242.6,
+        "interval_error_seconds": -3.5999999999999943,
+        "squared_interval_error_seconds2": 12.959999999999958
+      },
+      {
+        "first_event": "front_chassis_pair",
+        "second_event": "rear_wheel_assy",
+        "ground_truth_interval_seconds": 144.9,
+        "predicted_interval_seconds": 135.4,
+        "interval_error_seconds": -9.5,
+        "squared_interval_error_seconds2": 90.25
+      },
+      {
+        "first_event": "rear_chassis_variant",
+        "second_event": "front_rear_chassis_pin",
+        "ground_truth_interval_seconds": 0.0,
+        "predicted_interval_seconds": 35.6,
+        "interval_error_seconds": 35.6,
+        "squared_interval_error_seconds2": 1267.3600000000001
+      },
+      {
+        "first_event": "rear_chassis_variant",
+        "second_event": "rear_rear_chassis_pin",
+        "ground_truth_interval_seconds": 18.5,
+        "predicted_interval_seconds": 36.0,
+        "interval_error_seconds": 17.5,
+        "squared_interval_error_seconds2": 306.25
+      },
+      {
+        "first_event": "rear_chassis_variant",
+        "second_event": "front_bracket_pair",
+        "ground_truth_interval_seconds": 205.0,
+        "predicted_interval_seconds": 247.1,
+        "interval_error_seconds": 42.099999999999994,
+        "squared_interval_error_seconds2": 1772.4099999999996
+      },
+      {
+        "first_event": "rear_chassis_variant",
+        "second_event": "front_wheel_assy",
+        "ground_truth_interval_seconds": 205.0,
+        "predicted_interval_seconds": 250.8,
+        "interval_error_seconds": 45.80000000000001,
+        "squared_interval_error_seconds2": 2097.6400000000012
+      },
+      {
+        "first_event": "rear_chassis_variant",
+        "second_event": "rear_wheel_assy",
+        "ground_truth_interval_seconds": 103.7,
+        "predicted_interval_seconds": 143.6,
+        "interval_error_seconds": 39.89999999999999,
+        "squared_interval_error_seconds2": 1592.0099999999993
+      },
+      {
+        "first_event": "front_rear_chassis_pin",
+        "second_event": "rear_rear_chassis_pin",
+        "ground_truth_interval_seconds": 18.5,
+        "predicted_interval_seconds": 0.4,
+        "interval_error_seconds": -18.1,
+        "squared_interval_error_seconds2": 327.61000000000007
+      },
+      {
+        "first_event": "front_rear_chassis_pin",
+        "second_event": "front_bracket_pair",
+        "ground_truth_interval_seconds": 205.0,
+        "predicted_interval_seconds": 211.5,
+        "interval_error_seconds": 6.5,
+        "squared_interval_error_seconds2": 42.25
+      },
+      {
+        "first_event": "front_rear_chassis_pin",
+        "second_event": "front_wheel_assy",
+        "ground_truth_interval_seconds": 205.0,
+        "predicted_interval_seconds": 215.2,
+        "interval_error_seconds": 10.199999999999989,
+        "squared_interval_error_seconds2": 104.03999999999976
+      },
+      {
+        "first_event": "front_rear_chassis_pin",
+        "second_event": "rear_wheel_assy",
+        "ground_truth_interval_seconds": 103.7,
+        "predicted_interval_seconds": 108.0,
+        "interval_error_seconds": 4.299999999999997,
+        "squared_interval_error_seconds2": 18.489999999999977
+      },
+      {
+        "first_event": "rear_rear_chassis_pin",
+        "second_event": "front_bracket_pair",
+        "ground_truth_interval_seconds": 186.5,
+        "predicted_interval_seconds": 211.1,
+        "interval_error_seconds": 24.599999999999994,
+        "squared_interval_error_seconds2": 605.1599999999997
+      },
+      {
+        "first_event": "rear_rear_chassis_pin",
+        "second_event": "front_wheel_assy",
+        "ground_truth_interval_seconds": 186.5,
+        "predicted_interval_seconds": 214.8,
+        "interval_error_seconds": 28.30000000000001,
+        "squared_interval_error_seconds2": 800.8900000000007
+      },
+      {
+        "first_event": "rear_rear_chassis_pin",
+        "second_event": "rear_wheel_assy",
+        "ground_truth_interval_seconds": 85.2,
+        "predicted_interval_seconds": 107.6,
+        "interval_error_seconds": 22.39999999999999,
+        "squared_interval_error_seconds2": 501.7599999999996
+      },
+      {
+        "first_event": "front_bracket_pair",
+        "second_event": "front_wheel_assy",
+        "ground_truth_interval_seconds": 0.0,
+        "predicted_interval_seconds": 3.7,
+        "interval_error_seconds": 3.7,
+        "squared_interval_error_seconds2": 13.690000000000001
+      },
+      {
+        "first_event": "front_bracket_pair",
+        "second_event": "rear_wheel_assy",
+        "ground_truth_interval_seconds": 101.3,
+        "predicted_interval_seconds": 103.5,
+        "interval_error_seconds": 2.200000000000003,
+        "squared_interval_error_seconds2": 4.840000000000012
+      },
+      {
+        "first_event": "front_wheel_assy",
+        "second_event": "rear_wheel_assy",
+        "ground_truth_interval_seconds": 101.3,
+        "predicted_interval_seconds": 107.2,
+        "interval_error_seconds": 5.900000000000006,
+        "squared_interval_error_seconds2": 34.810000000000066
+      }
+    ]
+  }
+}

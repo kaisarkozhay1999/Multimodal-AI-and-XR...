@@ -1,0 +1,25 @@
+{
+  "sequence": "27_assy_0_1",
+  "model": "tcn",
+  "target_mode": "state",
+  "event_frames": {
+    "front_chassis_pair": 846,
+    "rear_chassis_variant": 837,
+    "front_rear_chassis_pin": 981,
+    "rear_rear_chassis_pin": 838,
+    "front_bracket_pair": 2682,
+    "front_wheel_assy": 2721,
+    "rear_wheel_assy": 2059
+  },
+  "psr_label_code_frames": {
+    "3": 846,
+    "6": 846,
+    "9_or_12": 837,
+    "15": 981,
+    "18": 838,
+    "21": 2682,
+    "24": 2682,
+    "27": 2721,
+    "30": 2059
+  }
+}
