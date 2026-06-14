@@ -1,0 +1,5 @@
+path: C:/Users/bakbe/OneDrive/Desktop/Datafortechnicaltask2/part_B/data/paper_yolo_dataset
+train: images/train
+val: images/val
+names:
+  0: instruction_paper

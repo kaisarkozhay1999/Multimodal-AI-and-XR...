@@ -1,0 +1,16 @@
+{
+  "session": "22_assy_0_1_paper_000000_000199",
+  "split": "20-frame temporal blocks; every fifth block is validation",
+  "images": {
+    "train": 160,
+    "val": 40
+  },
+  "positive_images": {
+    "train": 143,
+    "val": 39
+  },
+  "negative_images": {
+    "train": 17,
+    "val": 1
+  }
+}
