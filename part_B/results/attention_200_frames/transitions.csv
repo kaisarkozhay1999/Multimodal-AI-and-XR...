@@ -1,0 +1,12 @@
+from,to,frame,time_seconds
+assembly,instruction,20,2.0
+instruction,assembly,45,4.5
+assembly,instruction,54,5.4
+assembly,instruction,85,8.5
+instruction,assembly,94,9.4
+assembly,instruction,102,10.2
+instruction,assembly,110,11.0
+assembly,instruction,115,11.5
+instruction,assembly,122,12.2
+assembly,instruction,135,13.5
+instruction,assembly,141,14.1

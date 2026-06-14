@@ -1,0 +1,8 @@
+metric,value,unit,interpretation
+task_relevant_visual_engagement,76.57142857142857,percent_valid_gaze,Primary observable task-engagement indicator
+instruction_reliance,47.76119402985075,percent_relevant_gaze,Descriptive reliance on instruction paper
+off_target_attention,23.428571428571427,percent_valid_gaze,Valid gaze outside both recognized task AOIs
+instruction_assembly_switching_rate,37.714285714285715,switches_per_valid_minute,Checking and visual-coordination frequency
+stationary_gaze_entropy,0.9779501356269091,normalized_0_to_1,Spread of gaze time across the three AOIs
+gaze_transition_entropy,0.6111976191507758,normalized_0_to_1,Predictability of transitions between AOIs
+valid_gaze_data,87.5,percent_frames,"Measurement quality, not operator performance"

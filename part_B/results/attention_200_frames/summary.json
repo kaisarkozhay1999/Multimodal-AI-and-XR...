@@ -1,0 +1,68 @@
+{
+  "sequence": "22_assy_0_1",
+  "session": "22_assy_0_1_paper_000000_000199",
+  "fps": 10.0,
+  "frame_count": 200,
+  "duration_seconds": 20.0,
+  "gaze_tolerance_pixels": 30.0,
+  "minimum_stable_frames": 3,
+  "transition_gap_frames": 2,
+  "valid_gaze_frames": 175,
+  "invalid_gaze_frames": 25,
+  "valid_gaze_seconds": 17.5,
+  "state_frames": {
+    "instruction": 64,
+    "invalid": 25,
+    "assembly": 70,
+    "elsewhere": 41
+  },
+  "state_seconds": {
+    "instruction": 6.4,
+    "assembly": 7.0,
+    "elsewhere": 4.1,
+    "invalid": 2.5
+  },
+  "valid_time_percent": {
+    "instruction": 36.57142857142857,
+    "assembly": 40.0,
+    "elsewhere": 23.428571428571427
+  },
+  "instruction_to_assembly_transitions": 5,
+  "assembly_to_instruction_transitions": 6,
+  "bidirectional_transitions": 11,
+  "transitions_per_valid_minute": 37.714285714285715,
+  "check_instruction_validation": {
+    "intervals": [
+      [
+        0,
+        16
+      ],
+      [
+        19,
+        47
+      ],
+      [
+        82,
+        96
+      ],
+      [
+        98,
+        125
+      ]
+    ],
+    "valid_frames": 76,
+    "instruction_classified_frames": 58,
+    "instruction_agreement_percent": 76.3157894736842
+  },
+  "raw_state_frames": {
+    "instruction": 65,
+    "invalid": 25,
+    "assembly": 60,
+    "elsewhere": 50
+  },
+  "target_visibility": {
+    "paper_visible_frames": 182,
+    "paper_absent_frames": 18,
+    "assembly_visible_frames": 163
+  }
+}
